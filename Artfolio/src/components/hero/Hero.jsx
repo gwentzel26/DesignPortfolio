@@ -1,7 +1,6 @@
 import React from 'react'
-import hero from '../../assets/hero.png'
-import hero1 from '../../assets/hero1.png'
-import hero2 from '../../assets/hero2.png'
+import hero from '../../assets/keys1.jpeg'
+import electricButterfield from '../../assets/electricButterfield.jpeg'
 
 export default function Hero() {
   return (
@@ -19,12 +18,10 @@ export default function Hero() {
             <div data-aos='fade-up' data-aos-delay='600' className='flex-1 relative'>
                 <div className='grid grid-cols-1 gap-4'>
                     <div className='relative z-10 md:right-[-200px] right-[-150px] md:bottom-40 bottom-[-20px]'>
-                        <img src={hero1} alt="Image 1" className='rounded-lg md:w-40 md:h-40 w-28 h-28' />
+                        <img src={electricButterfield} alt="Image 1" className='rounded-lg md:w-40 md:h-40 w-28 h-28 object-cover' />
                     </div>
 
-                    <div className='absolute md:top-2 top-36 md:right-[-60px] right-[10px] md:w-40 md:h-40 w-20 h-20 p-2 rounded-lg shadow-md'>
-                        <img src={hero2} alt="Image 2" className='rounded-md' />
-                    </div>
+                   
                     <div className='absolute md:bottom-20 md:left-[-40px] md:w-80 md:h-80 w-52 h-52 p-2 rounded-lg '>
                         <img src={hero} alt="Image" className='rounded-md'/>
                     </div>

@@ -34,8 +34,8 @@ function Navbar({setCategory}){
 
 function ProductCard({ product }){
     return (
-        <div data-aos='fade-up' data-aos-delay='500' className="bg-orange-200 rounded-md overflow-hidden p-4 text-center">
-            <img src={product.image} alt={product.name} className="w-full h-48 object-contain mb-4" />
+        <div data-aos='fade-up' data-aos-delay='500' className=" rounded-md overflow-hidden p-4 text-center">
+            <img src={product.image} alt={product.name} className="w-full h-72 object-contain mb-4" />
             <h3 className="text-gray-700 font-semibold text-sm">{product.name}</h3>
             <p className="text-black font-bold mt-2">{product.price}</p>
         </div>
@@ -47,7 +47,7 @@ function ProductGrid({ category}){
        ? products
        : products.filter((product) => product.category === category);
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {
                 filteredProducts.map((product) => (
                     <ProductCard key={product.id} product={product}/>

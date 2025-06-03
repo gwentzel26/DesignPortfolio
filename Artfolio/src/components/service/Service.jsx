@@ -1,5 +1,5 @@
 import React from 'react'
-import service1 from '../../assets/service1.png';
+import laugh from '../../assets/laugh.jpeg';
 import service2 from '../../assets/service2.png';
 
 export default function Service() {
@@ -21,7 +21,7 @@ export default function Service() {
             </div>
             <div data-aos='fade-left' data-aos-delay='300' className='flex-1 grid grid-cols-2 gap-2'>
                 <div className='rounded-full overflow-hidden'>
-                    <img src={service1} alt="Image Service" className='w-full h-[390px] object-cover'/>
+                    <img src={laugh} alt="Image Service" className='w-full h-[390px] object-cover'/>
                 </div>
                 <div className='rounded-full overflow-hidden'>
                     <img src={service2} alt="Image Service" className='w-full h-[390px] object-cover'/>
