@@ -1,6 +1,6 @@
 import React from 'react'
 import laugh from '../../assets/laugh.jpeg';
-import service2 from '../../assets/service2.png';
+import desert1 from '../../assets/desert1.jpeg';
 
 export default function Service() {
   return (
@@ -10,9 +10,10 @@ export default function Service() {
                 <h3 className='text-sm text-gray-600 font-semibold'>Art & Music</h3>
                 <h1 className='text-4xl font-bold text-gray-800 leading-tight'>Work</h1>
                 <ul className='text-gray-700'>
-                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li> Doloremque beatae voluptas nam eveniet nostrum maiores minima </li>
-                    <li>Quis alias doloribus maiores excepturi libero modi vero sint voluptas</li> 
+                    <li>Gavin Wentzel is a multi-instrumentalist, vocalist, producer and artist</li>
+                    <li> who combines a love for well written chord progressions with the modern spontaneity </li>
+                    <li>of beat making. A fusion of soul, hip-hop, psychadelic, and electronic music</li> 
+                    <li>Gavin is releasing his second album Electric Butterfield on July 4th, 2025</li> 
                 </ul>
                 <div className='flex items-center'>
                     <span className='w-7 h-7 bg-orange-300 rounded-full'></span>
@@ -24,7 +25,7 @@ export default function Service() {
                     <img src={laugh} alt="Image Service" className='w-full h-[390px] object-cover'/>
                 </div>
                 <div className='rounded-full overflow-hidden'>
-                    <img src={service2} alt="Image Service" className='w-full h-[390px] object-cover'/>
+                    <img src={desert1} alt="Image Service" className='w-full h-[390px] object-cover'/>
                 </div>
             </div>
         </div>
