@@ -1,15 +1,15 @@
 import React from 'react';
-import contact from '../../assets/contact.png';
+import lakePainting1 from '../../assets/lakePainting2.jpeg';
 
 export default function Contact() {
   return (
     <section id='contact' className='relative h-screen mt-24'>
-        <img src={contact} alt="Background" data-aos='fade-on' className='absolute inset-0 w-full h-full object-cover' />
+        <img src={lakePainting1} alt="Background" data-aos='fade-on' className='absolute inset-0 w-full h-full object-cover object-top rounded-lg' />
         <div className='absolute inset-0 opacity-40'></div>
         <div className='relative z-10 font-arima flex items-center justify-end h-full'>
-            <div data-aos='fade-up' data-aos-delay='400' className='bg-gray-950 bg-opacity-75 p-10 md:w-1/2 h-full text-white space-y-6' >
-            <h2 className='text-7xl font-medium'>Contact Us</h2>
-            <p className='text-gray-300'>we will call you back</p>
+            <div data-aos='fade-up' data-aos-delay='400' className='bg-gray-600 bg-opacity-50 p-10 md:w-1/2 h-full text-white space-y-6' >
+            <h2 className='text-7xl font-medium'>Contact Me</h2>
+            <p className='text-gray-300'>Accepting show, recording, and album cover design opportunities</p>
             <form className='space-y-4'>
                 <div>
                     <label className='block text-xl mb-1'>Your name</label>

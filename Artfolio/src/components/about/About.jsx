@@ -46,13 +46,15 @@ export default function About() {
 
                 <button
                     onClick={goToPrevious}
-                    className='absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/70 rounded-full p-2 shadow hover:bg-white'
+                    className='absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/70 rounded-full p-2 shadow hover:bg-white
+                    transition-all duration-300 ease-in-out'
                 >
                     &#8592;
                 </button>
                 <button
                     onClick={goToNext}
-                    className='absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/70 rounded-full p-2 shadow hover:bg-white'
+                    className='absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/70 rounded-full p-2 shadow hover:bg-white
+                    transition-all duration-300 ease-in-out'
                 >
                     &#8594;
                 </button>

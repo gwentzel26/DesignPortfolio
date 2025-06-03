@@ -13,7 +13,7 @@ export default function Footer() {
             Instagram <FaInstagram size={30} />
           </>
         ),
-        href: "https://www.linkedin.com/in/gavinwentzel/",
+        href: "https://www.instagram.com/gavinwentzel/?hl=en",
         style: "rounded-tr-md",
       },
       {

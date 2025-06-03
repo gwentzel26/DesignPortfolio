@@ -7,6 +7,18 @@ import ExploringVieques from '../../assets/ExploringVieques.jpg';
 import LazyEsperanza from '../../assets/LazyEsperanza.jpg';
 import summerGigs from '../../assets/summerGigs.png';
 import blackTR from '../../assets/MerchIdeaBlack.png';
+import photography from '../../assets/photography.jpeg';
+import Photography1 from '../../assets/Photography1.jpeg';
+import Photography2 from '../../assets/Photography2.jpeg';
+import Photography3 from '../../assets/Photography3.jpeg';
+import Photography4 from '../../assets/Photography4.jpeg';
+import Photography5 from '../../assets/Photography5.jpeg';
+import Photography6 from '../../assets/Photography6.jpeg';
+import Photography7 from '../../assets/Photography7.jpeg';
+import Photography8 from '../../assets/Photography8.jpeg';
+import Photography9 from '../../assets/Photography9.jpeg';
+import Photography10 from '../../assets/Photography10.jpeg';
+
 
 const products = [
     {id:1, name:'Electric Butterfield', category:"Album Covers",image: electricButterfield},
@@ -17,14 +29,31 @@ const products = [
     {id:7, name:'The Time Riders at Hopshire',  category:"Flyers",image: hopshire},
     {id:8, name:'Summer Gig Schedule', category:"Flyers",image: summerGigs},
     {id:9, name:'Exploring Vieques', category:"Album Covers",image: ExploringVieques},
+    {id:10, name:'Exploring Vieques', category:"Photography",image: photography},
+    {id:11, name:'Exploring Vieques', category:"Photography",image: Photography1},
+    {id:12, name:'Exploring Vieques', category:"Photography",image: Photography2},
+    {id:13, name:'Exploring Vieques', category:"Photography",image: Photography3},
+    {id:14, name:'Exploring Vieques', category:"Photography",image: Photography4},
+    {id:15, name:'Exploring Vieques', category:"Photography",image: Photography5},
+    {id:16, name:'Exploring Vieques', category:"Photography",image: Photography6},
+    {id:17, name:'Exploring Vieques', category:"Photography",image: Photography7},
+    {id:18, name:'Exploring Vieques', category:"Photography",image: Photography8},
+    {id:19, name:'Exploring Vieques', category:"Photography",image: Photography9},
+    {id:20, name:'Exploring Vieques', category:"Photography",image: Photography10}
+   
 ];
 
 function Navbar({setCategory}){
+    const buttons = [
+        { label: "Album Covers", value: "Album Covers" },
+        { label: "Flyers", value: "Flyers" },
+        { label: "Photography", value: "Photography" },
+    ];
     return (
         <nav className="py-4 mb-6">
             <div data-aos='fade-up' data-aos-delay='400' className="container mx-auto px-4 flex space-x-4 sm:space-x-6 text-gray-700 font-semibold text-sm sm:text-lg ">
-                <button onClick={() => setCategory("all")} className="text-black border-b-2 border-black pb-1">All Products</button>
-                <button onClick={() => setCategory("Album Covers")} className="hover:text-black">Album Covers</button>
+
+                <button onClick={() => setCategory("Album Covers")} className=" hover:text-black">Album Covers</button>
                 <button onClick={() => setCategory("Flyers")} className="hover:text-black">Flyers</button>
                 <button onClick={() => setCategory("Photography")} className="hover:text-black">Photography</button>
             </div>
@@ -58,7 +87,7 @@ function ProductGrid({ category}){
 }
 
 function Products() {
-    const [category, setCategory] = useState("all");
+    const [category, setCategory] = useState("Album Covers");
 
     return (
         <section id="products" className="font-arima overflow-hidden min-h-[780px] sm:min-h-[600px]">
