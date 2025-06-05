@@ -18,6 +18,9 @@ import Photography7 from "../../assets/Photography7.jpeg";
 import Photography8 from "../../assets/Photography8.jpeg";
 import Photography9 from "../../assets/Photography9.jpeg";
 import Photography10 from "../../assets/Photography10.jpeg";
+// Import your logo file here. Replace "logo.png" with your actual logo filename.
+import { FaSpotify } from "react-icons/fa";
+import { SiApplemusic } from "react-icons/si";
 
 const products = [
   {
@@ -27,6 +30,9 @@ const products = [
     image: electricButterfield,
     backText:
       "Electric Butterfield album cover, released July 4, 2025. Designed using vintage-inspired textures and bold typography.",
+    // Optional: you can add URL targets for the logos here
+    leftLink: "https://example.com/left1",
+    rightLink: "https://example.com/right1",
   },
   {
     id: 2,
@@ -35,6 +41,8 @@ const products = [
     image: LazyEsperanza,
     backText:
       "Lazy Esperanza single artwork (2024). A hand-drawn collage concept reflecting laid-back summer vibes.",
+    leftLink: "https://example.com/left2",
+    rightLink: "https://example.com/right2",
   },
   {
     id: 4,
@@ -43,6 +51,8 @@ const products = [
     image: MeetingAgain,
     backText:
       "Meeting Again EP cover—minimalist geometric shapes and muted color palette to evoke reunion themes.",
+    leftLink: "https://example.com/left4",
+    rightLink: "https://example.com/right4",
   },
   {
     id: 5,
@@ -51,6 +61,8 @@ const products = [
     image: blackTR,
     backText:
       "The Time Riders artwork uses contrasting black and gold to capture the band’s bold stage presence.",
+    leftLink: "https://example.com/left5",
+    rightLink: "https://example.com/right5",
   },
   {
     id: 6,
@@ -59,6 +71,8 @@ const products = [
     image: underThePine,
     backText:
       "Under the Pine album art: a woodland scene layered with analog film grain for a nostalgic feel.",
+    leftLink: "https://example.com/left6",
+    rightLink: "https://example.com/right6",
   },
   {
     id: 7,
@@ -83,6 +97,8 @@ const products = [
     image: ExploringVieques,
     backText:
       "Special edition cover inspired by Caribbean landscapes, highlighting vibrant blues and tropical motifs.",
+    leftLink: "https://example.com/left9",
+    rightLink: "https://example.com/right9",
   },
   {
     id: 10,
@@ -182,19 +198,13 @@ function Navbar({ setCategory }) {
         data-aos-delay="400"
         className="container mx-auto px-4 flex space-x-4 sm:space-x-6 text-gray-700 font-semibold text-sm sm:text-lg"
       >
-        <button
-          onClick={() => setCategory("Album Covers")}
-          className="hover:text-black"
-        >
+        <button onClick={() => setCategory("Album Covers")} className="hover:text-black">
           Album Covers
         </button>
         <button onClick={() => setCategory("Flyers")} className="hover:text-black">
           Flyers
         </button>
-        <button
-          onClick={() => setCategory("Photography")}
-          className="hover:text-black"
-        >
+        <button onClick={() => setCategory("Photography")} className="hover:text-black">
           Photography
         </button>
       </div>
@@ -206,48 +216,54 @@ function ProductCard({ product }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    // Parent container with no fixed height—its size is driven by the front content
     <div
       onClick={() => setIsFlipped((prev) => !prev)}
-      className="cursor-pointer inline-block [perspective:1000px]"
+      className="w-full cursor-pointer [perspective:1000px]"
       data-aos="fade-up"
       data-aos-delay="500"
     >
-      {/* 
-        Inner wrapper: transforms in 3D. 
-        Because it’s inline-block and has no forced height, 
-        it will size itself to the “front” content’s dimensions.
-      */}
       <div
         className={`
-          relative inline-block transition-transform duration-500
+          relative w-full transition-transform duration-500
           [transform-style:preserve-3d]
           ${isFlipped ? "[transform:rotateY(180deg)]" : ""}
         `}
       >
-        {/* FRONT FACE (in normal flow, defining wrapper size) */}
-        <div className="relative flex flex-col items-center p-4">
+        {/* FRONT FACE */}
+        <div className="[backface-visibility:hidden] flex flex-col items-center p-4">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-auto object-contain mb-4"
+            className="w-full h-72 object-contain mb-4"
           />
-          <h3 className="text-gray-700 font-semibold text-sm">
-            {product.name}
-          </h3>
+          {product.category === "Album Covers" ? (
+            <div className="flex items-center space-x-2">
+             
+              <h3 className="text-gray-700 font-semibold text-sm">{product.name}</h3>
+            
+            </div>
+          ) : (
+            <h3 className="text-gray-700 font-semibold text-sm">{product.name}</h3>
+          )}
         </div>
 
-        {/* BACK FACE (positioned absolutely, covering the same dynamic size) */}
+        {/* BACK FACE */}
         <div
           className="
-            absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center p-6 
+            absolute inset-0 flex flex-col items-center justify-center p-6
             bg-white rounded-lg shadow-lg
-            [backface-visibility:hidden] [transform:rotateY(180deg)]
+            [backface-visibility:hidden]
+            [transform:rotateY(180deg)]
           "
         >
           <h3 className="text-gray-800 font-semibold mb-2">{product.name}</h3>
           <p className="text-sm text-gray-600 mb-4">{product.backText}</p>
           <p className="mt-auto text-xs text-gray-500">(Click to flip back)</p>
+          <div className="flex items-center space-x-4">
+            <FaSpotify size={30} />
+            <SiApplemusic size={30} />
+          </div> 
+         
         </div>
       </div>
     </div>
@@ -273,10 +289,7 @@ function Products() {
   const [category, setCategory] = useState("Album Covers");
 
   return (
-    <section
-      id="products"
-      className="font-arima overflow-hidden min-h-[780px] sm:min-h-[600px]"
-    >
+    <section id="products" className="font-arima overflow-hidden min-h-[780px] sm:min-h-[600px]">
       <Navbar setCategory={setCategory} />
       <div className="container mx-auto px-4">
         <ProductGrid category={category} />
