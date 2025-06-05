@@ -3,6 +3,8 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
+import { FaSpotify } from "react-icons/fa";
+import { SiApplemusic } from "react-icons/si";
 
 export default function Footer() {
   const Links = [
@@ -11,6 +13,26 @@ export default function Footer() {
         child: (
           <>
             Instagram <FaInstagram size={30} />
+          </>
+        ),
+        href: "https://www.instagram.com/gavinwentzel/?hl=en",
+        style: "rounded-tr-md",
+      },
+      {
+        id: 7,
+        child: (
+          <>
+            Spotify <FaSpotify size={30} />
+          </>
+        ),
+        href: "https://www.instagram.com/gavinwentzel/?hl=en",
+        style: "rounded-tr-md",
+      },
+      {
+        id: 8,
+        child: (
+          <>
+            Apple Music <SiApplemusic size={30} />
           </>
         ),
         href: "https://www.instagram.com/gavinwentzel/?hl=en",
