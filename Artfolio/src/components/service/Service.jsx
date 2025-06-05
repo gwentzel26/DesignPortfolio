@@ -10,10 +10,10 @@ export default function Service() {
                 <h3 className='text-sm text-gray-600 font-semibold'>Art & Music</h3>
                 <h1 className='text-4xl font-bold text-gray-800 leading-tight'>Work</h1>
                 <ul className='text-gray-700'>
-                    <li>Gavin Wentzel is a multi-instrumentalist, vocalist, producer and artist</li>
-                    <li> who combines a love for well written chord progressions with the modern spontaneity </li>
-                    <li>of beat making. A fusion of soul, hip-hop, psychadelic, and electronic music</li> 
-                    <li>Gavin is releasing his second album Electric Butterfield on July 4th, 2025</li> 
+                    <li>In addition to his musical abilities, Gavin creates designs</li>
+                    <li>for album covers, press releases, and fun  </li>
+                    <li>From his love of drawing and photography he creates layers</li> 
+                    <li> of blended mediums in Adobe Photoshop</li> 
                 </ul>
                 <div className='flex items-center'>
                     <span className='w-7 h-7 bg-orange-300 rounded-full'></span>

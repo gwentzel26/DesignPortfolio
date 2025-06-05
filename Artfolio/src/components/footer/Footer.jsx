@@ -98,10 +98,11 @@ export default function Footer() {
             <div data-aos='fade-up' data-aos-delay='500' className='flex flex-col'>
                 <h2 className='text-xl mb-4'>Socials</h2>
                 <ul className='text-gray-400 text-sm space-y-2'>
-                    <li><a href='https://open.spotify.com/artist/7txhmzsDvy1QtvVyugAQcs?si=w08Io2RYTZWtWX9_x5Qb3Q'>Spotify</a></li>
-                    <li><a href='https://www.instagram.com/gavinwentzel/?hl=en'>Instagram</a></li>
-                    <li><a href='https://music.apple.com/us/artist/gavin-wentzel/1462975147'>Apple Music</a></li>
-                    <li><a href='https://www.youtube.com/@gavinwentzel'>YouTube</a></li>
+                    <li><a href='https://open.spotify.com/artist/7txhmzsDvy1QtvVyugAQcs?si=w08Io2RYTZWtWX9_x5Qb3Q' target='_blank'>Spotify</a></li>
+                    <li><a href='https://www.instagram.com/gavinwentzel/?hl=en'target='_blank'>Instagram</a></li>
+                    <li><a href='https://music.apple.com/us/artist/gavin-wentzel/1462975147' target='_blank'>Apple Music</a></li>
+                    <li><a href='https://www.youtube.com/@gavinwentzel' target='_blank'>YouTube</a></li>
+                    <li><a href='https://www.tiktok.com/@gavinwentzel' target='_blank'>TikTok</a></li>
                 </ul>
             </div>
             <div data-aos='fade-up' data-aos-delay='500' className='flex flex-col'>
