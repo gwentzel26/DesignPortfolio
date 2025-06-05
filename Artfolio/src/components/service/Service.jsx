@@ -17,7 +17,7 @@ export default function Service() {
                 </ul>
                 <div className='flex items-center'>
                     <span className='w-7 h-7 bg-orange-300 rounded-full'></span>
-                    <button className='-ml-5 font-bold text-black rounded-full z-10'>Order Now</button>
+                   
                 </div>
             </div>
             <div data-aos='fade-left' data-aos-delay='300' className='flex-1 grid grid-cols-2 gap-2'>

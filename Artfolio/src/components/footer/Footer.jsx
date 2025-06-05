@@ -98,7 +98,7 @@ export default function Footer() {
                     Website Designed and Created by Gavin Wentzel
                 </p>
             </div>
-             <div className="hidden lg:flex lg:flex-col lg:top-[35%] left-0 lg:fixed">
+    <div className="hidden md:flex md:flex-col :top-[35%] md:fixed lg:flex lg:flex-col lg:top-[35%] left-0 lg:fixed">
       <ul>
         {Links.map(({id, child, href, style, download}) => (
           <li key={id} className={
