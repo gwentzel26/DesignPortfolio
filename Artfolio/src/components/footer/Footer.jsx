@@ -25,7 +25,7 @@ export default function Footer() {
             Spotify <FaSpotify size={30} />
           </>
         ),
-        href: "https://www.instagram.com/gavinwentzel/?hl=en",
+        href: "https://open.spotify.com/artist/7txhmzsDvy1QtvVyugAQcs?si=w08Io2RYTZWtWX9_x5Qb3Q",
         style: "rounded-tr-md",
       },
       {
@@ -35,7 +35,7 @@ export default function Footer() {
             Apple Music <SiApplemusic size={30} />
           </>
         ),
-        href: "https://www.instagram.com/gavinwentzel/?hl=en",
+        href: "https://music.apple.com/us/artist/gavin-wentzel/1462975147",
         style: "rounded-tr-md",
       },
       {

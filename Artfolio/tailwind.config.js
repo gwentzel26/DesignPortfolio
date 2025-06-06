@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        arima: ['Arima', 'cursive']
+        arima: ['Arima', 'cursive'],
+        beauriveau: ['Beau Riveau']
       },
     },
   },

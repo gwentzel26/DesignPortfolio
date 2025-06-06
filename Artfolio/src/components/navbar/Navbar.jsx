@@ -30,22 +30,31 @@ export default function Navbar() {
 
   return (
     <section className="flex items-center font-arima justify-center">
-      <nav data-aos="fade-up" data-aos-delay="400" className="flex justify-between items-center w-full px-8 py-4">
+      {/* Fixed Navbar at top */}
+      <nav
+        data-aos="fade-up"
+        data-aos-delay="400"
+        className="fixed top-0 left-0 w-full bg-gradient-to-r from-gray-100 via-white to-[#914e0f] px-8 py-4 shadow-md z-50 flex justify-between items-center"
+      >
         <div className="flex-1">
           <div onClick={() => setIsMenuOpen(true)} className="cursor-pointer">
             <AiOutlineMenu size={30} />
           </div>
         </div>
         <div className="flex-1 text-center">
-          <h1 className="md:text-2xl text-xl font-semibold">Gavin Wentzel</h1>
+          <h1 className="font-beauriveau md:text-5xl text-3xl font-semibold">Gavin Wentzel</h1>
         </div>
         <div className="flex flex-1 justify-end md:font-bold font-semibold space-x-4"></div>
       </nav>
 
+      {/* Offset for fixed navbar */}
+      <div className="h-20" />
+
+      {/* Side menu */}
       <ul
         ref={menuRef}
         className={`
-          fixed left-0 top-0 md:w-[20%] w-[45%] h-full border-r border-r-gray-100 bg-[#ffc48d] 
+          fixed left-0 top-0 md:w-[20%] w-[45%] h-full border-r border-r-gray-100 bg-[#ffc48d]
           ease-in-out duration-500 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}
         `}
         style={{ zIndex: 100 }}
