@@ -32,7 +32,7 @@ const products = [
     category: "Album Covers",
     image: electricButterfield,
     backText:
-      "Electric Butterfield album cover, Released on July 4, 2025. Designed using vintage-inspired textures and bold typography.",
+      "Electric Butterfield to be released on July 4, 2025. The music is a fusion of soul, hip-hop, psycadelic, and electronic. Artwork is designed by blending drawings, photography, and digital painting.",
     backImage: bgEB,
     spotifyLink: "https://open.spotify.com/album/electric-butterfield",
     appleMusicLink: "https://music.apple.com/album/electric-butterfield",
@@ -43,7 +43,7 @@ const products = [
     category: "Album Covers",
     image: LazyEsperanza,
     backText:
-      "Lazy Esperanza single artwork (2024). A hand-drawn collage concept reflecting laid-back summer vibes.",
+      "Lazy Esperanza is an upcoming, mostly instrumental project. The music is inspired by a 6-week stay at Lazy Jack's hostel in Esperanza, Vieques. The artwork is a blend of photographs taken during the time",
     // No backImage here, so will use default styling
     spotifyLink: "https://open.spotify.com/album/lazy-esperanza",
     appleMusicLink: "https://music.apple.com/album/lazy-esperanza",
@@ -54,7 +54,7 @@ const products = [
     category: "Album Covers",
     image: MeetingAgain,
     backText:
-      "Meeting Again EP cover—minimalist geometric shapes and muted color palette to evoke reunion themes.",
+      "Meeting Again is a therapeutic lofi instrumental featuring Rhodes keys.  The cover is a drawing of butterflies carrying a coffin through the sky",
     // No backImage here, default styling
     spotifyLink:
       "https://open.spotify.com/track/6dguMF4rIjeBgiBjKOgzSs?si=b91ad1f754d04f5a",
@@ -67,7 +67,7 @@ const products = [
     category: "Album Covers",
     image: blackTR,
     backText:
-      "The Time Riders artwork uses contrasting black and gold to capture the band’s bold stage presence.",
+      "The Time Riders are a band based in Ithaca, NY who play a variety of hits from throughout the ages.",
     // No backImage here, default styling
     spotifyLink:
       "https://open.spotify.com/album/2WEKpRsbBrsibC5Qy1BPNb?si=MGvjLZLGT0ad-t_fhd3gEg",
@@ -79,7 +79,7 @@ const products = [
     category: "Album Covers",
     image: underThePine,
     backText:
-      "Under the Pine album art: a woodland scene layered with analog film grain for a nostalgic feel.",
+      "Under the Pine single artwork was painted on a block of wood with additional digital painting in Photoshop",
     // No backImage here, default styling
     spotifyLink:
       "https://open.spotify.com/track/14NIM4neiIQ7eVpd1c18AF?si=222b736c3d0245f5",
@@ -92,7 +92,7 @@ const products = [
     category: "Flyers",
     image: hopshire,
     backText:
-      "Concert flyer for The Time Riders at Hopshire Brewery, July 2024. Emphasizes craft-beer culture and live music energy.",
+      "Concert flyer for The Time Riders at Hopshire Brewery, July 2024. Emphasizes an oldschool live performance aesthetic.",
     // No backImage, no links
   },
   {
@@ -101,7 +101,7 @@ const products = [
     category: "Flyers",
     image: summerGigs,
     backText:
-      "Summer 2023 gig schedule flyer: bright colors and clear dates/venues to boost attendance.",
+      "Summer 2025 gig schedule flyer: bright colors and clear dates/venues to use for marketing.",
     // No backImage, no links
   },
   {
@@ -110,7 +110,7 @@ const products = [
     category: "Album Covers",
     image: ExploringVieques,
     backText:
-      "Special edition cover inspired by Caribbean landscapes, highlighting vibrant blues and tropical motifs.",
+      "A single-pack from upcoming album Lazy Esperanza featuring Vieques landscapes.",
     // No backImage here, default styling
     spotifyLink:
       "https://open.spotify.com/album/5u00qbDAQFFf3542ShQpbf?si=kcjH3FeJQIKYwuX-zUfJiw",
@@ -119,101 +119,101 @@ const products = [
   },
   {
     id: 10,
-    name: "Exploring Vieques",
+    name: "Light Museum: Seville ",
     category: "Photography",
     image: photography,
     backText:
-      "Behind the lens: capturing sunrise over Vieques—soft pastels and long exposures to emphasize tranquility.",
+      "While studying in Seville, Spain.  This picture is multiple reflections of himself",
     // No backImage, no links
   },
   {
     id: 11,
-    name: "Exploring Vieques",
+    name: "Light Distortion: Seville",
     category: "Photography",
     image: Photography1,
     backText:
-      "Drone shot of Caribbean shoreline: turquoise waters meeting coral sands in early morning light.",
+      "Gavin created a photography album during his time taking a class while studying in Seville, Spain.",
     // No backImage, no links
   },
   {
     id: 12,
-    name: "Exploring Vieques",
+    name: "Palm Trees: Seville",
     category: "Photography",
     image: Photography2,
     backText:
-      "Macro photograph of tropical flora: dew drops clinging to bright green leaves at dawn.",
+      "An upward looking view of palm trees in Maria Luisa park ",
     // No backImage, no links
   },
   {
     id: 13,
-    name: "Exploring Vieques",
+    name: "Garden Door: Seville",
     category: "Photography",
     image: Photography3,
     backText:
-      "Portrait series of local fishermen—capturing weathered features and community spirit.",
+      "A shot from the Alcazar of Seville, Dorne's Water Gardens from the series Game of Thrones",
     // No backImage, no links
   },
   {
     id: 14,
-    name: "Exploring Vieques",
+    name: "3 bottles: Seville",
     category: "Photography",
     image: Photography4,
     backText:
-      "Black-and-white street snapshot of Vieques market—timeless moments in everyday life.",
+      "A horizontal view from the light museum",
     // No backImage, no links
   },
   {
     id: 15,
-    name: "Exploring Vieques",
+    name: "City Night: Ceville",
     category: "Photography",
     image: Photography5,
     backText:
-      "Night sky timelapse: Milky Way arching over a palm tree silhouette on the island coast.",
+      "Used motion technique with his Nikon to capture the movement of a Seville bus",
     // No backImage, no links
   },
   {
     id: 16,
-    name: "Exploring Vieques",
+    name: "White Distortion: Seville",
     category: "Photography",
     image: Photography6,
     backText:
-      "Candid shot of a local musician playing steel drums—capturing rhythm and island culture.",
+      "A distorted shot representing morning light",
     // No backImage, no links
   },
   {
     id: 17,
-    name: "Exploring Vieques",
+    name: "A glance from outside: Seville",
     category: "Photography",
     image: Photography7,
     backText:
-      "Close-up of a conch shell on the beach—textures and pastel highlights in soft midday sun.",
+      "A view into a bar featuring a nice palette of colors.",
     // No backImage, no links
   },
   {
     id: 18,
-    name: "Exploring Vieques",
+    name: "Wall Architecture: Seville",
     category: "Photography",
     image: Photography8,
     backText:
-      "Sunset silhouette of a palm grove—fiery oranges blending into deep purples as day ends.",
+      "Bending black shapes capturing a reflection of the city.",
     // No backImage, no links
   },
   {
     id: 19,
-    name: "Exploring Vieques",
+    name: "Water Lights",
     category: "Photography",
     image: Photography9,
     backText:
-      "Underwater shot of coral reef—vibrant marine life in crystal-clear Caribbean waters.",
+      "A reflection of inside lights overlooking Butterfield Lake in the 1000 islands",
     // No backImage, no links
   },
   {
     id: 20,
-    name: "Exploring Vieques",
+    name: "Ice Clouds",
     category: "Photography",
     image: Photography10,
     backText:
-      "Street art mural in Vieques town center—bold colors celebrating local heritage and creativity.",
+      "A strong capture of the reflection of clouds and the colorful fall in the water.",
     // No backImage, no links
   },
 ];
