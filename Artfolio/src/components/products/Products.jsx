@@ -32,7 +32,7 @@ const products = [
     category: "Album Covers",
     image: electricButterfield,
     backText:
-      "Electric Butterfield album cover, released July 4, 2025. Designed using vintage-inspired textures and bold typography.",
+      "Electric Butterfield album cover, Released on July 4, 2025. Designed using vintage-inspired textures and bold typography.",
     backImage: bgEB,
     spotifyLink: "https://open.spotify.com/album/electric-butterfield",
     appleMusicLink: "https://music.apple.com/album/electric-butterfield",

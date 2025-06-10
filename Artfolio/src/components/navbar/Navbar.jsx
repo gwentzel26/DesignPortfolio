@@ -42,7 +42,7 @@ export default function Navbar() {
           </div>
         </div>
         <div className="flex-1 text-center">
-          <h1 className="font-beauriveau md:text-5xl text-3xl font-semibold">Gavin Wentzel</h1>
+         <a href="#home"> <h1 className="font-beauriveau md:text-5xl text-3xl font-semibold">Gavin Wentzel</h1></a>
         </div>
         <div className="flex flex-1 justify-end md:font-bold font-semibold space-x-4"></div>
       </nav>
