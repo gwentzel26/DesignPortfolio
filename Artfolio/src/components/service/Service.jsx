@@ -1,6 +1,6 @@
 import React from 'react'
 import laugh from '../../assets/laugh.jpeg';
-import desert1 from '../../assets/desert1.jpeg';
+import lightPic from '../../assets/lightPic.jpeg';
 
 export default function Service() {
   return (
@@ -11,9 +11,9 @@ export default function Service() {
                 <h1 className='text-4xl font-bold text-gray-800 leading-tight'>Work</h1>
                 <ul className='text-gray-700'>
                     <li>In addition to his musical abilities, Gavin creates designs</li>
-                    <li>for album covers, press releases, and fun  </li>
-                    <li>From his love of drawing and photography he creates layers</li> 
-                    <li> of blended mediums in Adobe Photoshop</li> 
+                    <li>for album covers, press releases, and gig flyers.  </li>
+                    <li>From his love of drawing and photography he creates layers of blended mediums in Adobe Photoshop.</li> 
+                    <li> </li> 
                 </ul>
                 <div className='flex items-center'>
                     <span className='w-7 h-7 bg-orange-300 rounded-full'></span>
@@ -25,7 +25,7 @@ export default function Service() {
                     <img src={laugh} alt="Image Service" className='w-full h-[390px] object-cover'/>
                 </div>
                 <div className='rounded-full overflow-hidden'>
-                    <img src={desert1} alt="Image Service" className='w-full h-[390px] object-cover'/>
+                    <img src={lightPic} alt="Image Service" className='w-full h-[390px] object-cover'/>
                 </div>
             </div>
         </div>

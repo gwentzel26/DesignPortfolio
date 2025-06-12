@@ -218,23 +218,30 @@ const products = [
   },
 ];
 
-function Navbar({ setCategory }) {
+function Navbar({ category, setCategory }) {
+  const tabs = ["Album Covers", "Flyers", "Photography"];
+
   return (
     <nav className="py-4 mb-6">
       <div
         data-aos="fade-up"
         data-aos-delay="400"
-        className="container mx-auto px-4 flex space-x-4 sm:space-x-6 text-gray-700 font-semibold text-sm sm:text-lg"
+        className="container mx-auto px-4 flex space-x-6 text-gray-700 font-semibold text-sm sm:text-lg"
       >
-        <button onClick={() => setCategory("Album Covers")} className="hover:text-black">
-          Album Covers
-        </button>
-        <button onClick={() => setCategory("Flyers")} className="hover:text-black">
-          Flyers
-        </button>
-        <button onClick={() => setCategory("Photography")} className="hover:text-black">
-          Photography
-        </button>
+        {tabs.map((tab) => (
+          <button
+            key={tab}
+            onClick={() => setCategory(tab)}
+            className={`
+              pb-2 transition-colors duration-200
+              ${category === tab
+                ? "border-b-2 border-black text-black"
+                : "border-b-2 border-transparent text-gray-700 hover:text-black"}
+            `}
+          >
+            {tab}
+          </button>
+        ))}
       </div>
     </nav>
   );
@@ -252,12 +259,11 @@ function ProductCard({ product }) {
     >
       <div
         className={`
-          relative w-full transition-transform duration-500
-          [transform-style:preserve-3d]
+          relative w-full transition-transform duration-500 [transform-style:preserve-3d]
           ${isFlipped ? "[transform:rotateY(180deg)]" : ""}
         `}
       >
-        {/* FRONT FACE: unchanged */}
+        {/* FRONT FACE */}
         <div className="[backface-visibility:hidden] flex flex-col items-center p-4">
           <img
             src={product.image}
@@ -267,14 +273,10 @@ function ProductCard({ product }) {
           <h3 className="text-gray-700 font-semibold text-sm">{product.name}</h3>
         </div>
 
-        {/* BACK FACE: if product.backImage exists, use it; otherwise default styling */}
+        {/* BACK FACE */}
         {product.backImage ? (
           <div
-            className="
-              absolute inset-0 flex items-center justify-center 
-              bg-cover bg-center rounded-lg shadow-lg
-              [backface-visibility:hidden] [transform:rotateY(180deg)]
-            "
+            className="absolute inset-0 flex items-center justify-center bg-cover bg-center rounded-lg shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)]"
             style={{ backgroundImage: `url(${product.backImage})` }}
           >
             <div className="bg-white bg-opacity-80 p-4 rounded-md max-w-xs text-center">
@@ -282,20 +284,12 @@ function ProductCard({ product }) {
               <p className="text-sm text-gray-700 mb-4">{product.backText}</p>
               <div className="flex items-center justify-center space-x-4">
                 {product.spotifyLink && (
-                  <a
-                    href={product.spotifyLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={product.spotifyLink} target="_blank" rel="noopener noreferrer">
                     <FaSpotify size={30} />
                   </a>
                 )}
                 {product.appleMusicLink && (
-                  <a
-                    href={product.appleMusicLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={product.appleMusicLink} target="_blank" rel="noopener noreferrer">
                     <SiApplemusic size={30} />
                   </a>
                 )}
@@ -303,37 +297,10 @@ function ProductCard({ product }) {
             </div>
           </div>
         ) : (
-          <div
-            className="
-              absolute inset-0 flex flex-col items-center justify-center p-6
-              bg-white rounded-lg shadow-lg
-              [backface-visibility:hidden] [transform:rotateY(180deg)]
-            "
-          >
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)]">
             <h3 className="text-gray-800 font-semibold mb-2">{product.name}</h3>
             <p className="text-sm text-gray-600 mb-4">{product.backText}</p>
             <p className="mt-auto text-xs text-gray-500">(Click to flip back)</p>
-            <div className="flex items-center space-x-4 mb-2">
-              {product.spotifyLink && (
-                <a
-                  href={product.spotifyLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaSpotify size={30} />
-                </a>
-              )}
-              {product.appleMusicLink && (
-                <a
-                  href={product.appleMusicLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SiApplemusic size={30} />
-                </a>
-              )}
-            </div>
-            
           </div>
         )}
       </div>
@@ -342,14 +309,11 @@ function ProductCard({ product }) {
 }
 
 function ProductGrid({ category }) {
-  const filteredProducts =
-    category === "all"
-      ? products
-      : products.filter((product) => product.category === category);
+  const filtered = category === "all" ? products : products.filter((p) => p.category === category);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      {filteredProducts.map((product) => (
+      {filtered.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
     </div>
@@ -361,7 +325,9 @@ function Products() {
 
   return (
     <section id="products" className="font-arima overflow-hidden min-h-[780px] sm:min-h-[600px]">
-      <Navbar setCategory={setCategory} />
+      {/* Pass category into Navbar */}
+      <Navbar category={category} setCategory={setCategory} />
+
       <div className="container mx-auto px-4">
         <ProductGrid category={category} />
       </div>

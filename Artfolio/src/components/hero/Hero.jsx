@@ -16,8 +16,8 @@ export default function Hero() {
           <div className="flex items-center space-x-2">
             <span className="w-8 h-8 bg-orange-300 rounded-full"></span>
             <a
-                    href="#products"
-                    className="mt-8 inline-block px-6 py-3 bg-green-700 hover:bg-green-800 text-white rounded-lg transition"
+                    href="#services"
+                    className="mt-8 inline-block px-6 py-3 bg-gradient-to-r from-orange-300  to-[#914e0f] bg-orange-700 hover:bg-none hover:bg-orange-700 text-white rounded-lg transition"
                     >
                     View Portfolio
                 </a>

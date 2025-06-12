@@ -64,19 +64,9 @@ export default function Footer() {
           Mail <HiOutlineMail size={30} />
         </>
       ),
-      href: "mailto:gavinwentzel@gmail.com",
+      href: "mailto:gavinwentzelmusic@gmail.com",
     },
-    {
-      id: 4,
-      child: (
-        <>
-          Resume <BsFillPersonLinesFill size={30} />
-        </>
-      ),
-      href: "SoftwareResume4-05.pdf",
-      style: "rounded-br-md",
-      download: true,
-    },
+
   ];
 
 
@@ -130,11 +120,10 @@ export default function Footer() {
             <div data-aos='fade-up' data-aos-delay='500' className='flex flex-col'>
                 <h2 className='text-xl mb-4'>Quick Links</h2>
                 <ul className='text-gray-400 text-sm space-y-2'>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Services</li>
-                    <li>Contact Us</li>
-                    <li>Help</li>
+                    <li><a href='#home'>Home</a></li>
+                    <li><a href='#about'>About Me</a></li>
+                    <li><a href='#services'>Work</a></li>
+                    <li><a href='#contact'>Contact Us</a></li>
                 </ul>
             </div>
         </div>
