@@ -1,18 +1,24 @@
 import React from 'react';
-import lakePainting1 from '../../assets/lakePainting2.jpeg';
 import { useForm, ValidationError } from '@formspree/react';
+import InputMask from 'react-input-mask';
+import lakePainting1 from '../../assets/lakePainting2.jpeg';
 
 export default function Contact() {
-  // Substitute your form ID here:
+  // useForm hook from Formspree
   const [state, handleSubmit] = useForm('xpwrdjdn');
 
-  // If the form has been successfully submitted
+  // Show a thank-you message on successful submit
   if (state.succeeded) {
     return (
       <section className="relative h-screen mt-24">
-        {/* …same background markup… */}
+        <img
+          src={lakePainting1}
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover object-top rounded-lg"
+        />
+        <div className="absolute inset-0 bg-black opacity-40 rounded-lg" />
         <div className="relative z-10 flex items-center justify-center h-full">
-          <div className="bg-gray-600 bg-opacity-75 p-10 rounded-lg text-white">
+          <div className="bg-gray-600 bg-opacity-75 p-10 rounded-lg text-white text-center">
             <h2 className="text-5xl mb-4">Thanks for reaching out!</h2>
             <p>I’ll get back to you as soon as I can.</p>
           </div>
@@ -23,12 +29,16 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative h-screen mt-24">
+      {/* Background Image & Overlay */}
       <img
         src={lakePainting1}
         alt="Background"
+        data-aos="fade-on"
         className="absolute inset-0 w-full h-full object-cover object-top rounded-lg"
       />
       <div className="absolute inset-0 bg-black opacity-40 rounded-lg" />
+
+      {/* Form Container */}
       <div className="relative z-10 font-arima flex items-center justify-end h-full">
         <div
           data-aos="fade-up"
@@ -41,7 +51,7 @@ export default function Contact() {
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Name */}
+            {/* Name Field */}
             <div>
               <label htmlFor="name" className="block text-xl mb-1">
                 Your name
@@ -49,6 +59,7 @@ export default function Contact() {
               <input
                 id="name"
                 type="text"
+                placeholder="Your name"
                 name="name"
                 required
                 className="w-full p-2 bg-black bg-opacity-75"
@@ -56,21 +67,25 @@ export default function Contact() {
               <ValidationError prefix="Name" field="name" errors={state.errors} />
             </div>
 
-            {/* Phone */}
+            {/* Phone Field with Mask */}
             <div>
               <label htmlFor="phone" className="block text-xl mb-1">
                 Your phone number
               </label>
-              <input
-                id="phone"
-                type="tel"
-                name="phone"
-                className="w-full p-2 bg-black bg-opacity-75"
-              />
+              <InputMask mask="(999) 999-9999" id="phone" name="phone">
+                {(inputProps) => (
+                  <input
+                    {...inputProps}
+                    type="tel"
+                    placeholder="(123) 456-7890"
+                    className="w-full p-2 bg-black bg-opacity-75"
+                  />
+                )}
+              </InputMask>
               <ValidationError prefix="Phone" field="phone" errors={state.errors} />
             </div>
 
-            {/* Message */}
+            {/* Message Field */}
             <div>
               <label htmlFor="message" className="block text-xl mb-1">
                 Message
@@ -78,6 +93,7 @@ export default function Contact() {
               <textarea
                 id="message"
                 name="message"
+                placeholder='Write something here...'
                 required
                 rows="4"
                 className="w-full p-2 bg-black bg-opacity-75"
@@ -85,6 +101,7 @@ export default function Contact() {
               <ValidationError prefix="Message" field="message" errors={state.errors} />
             </div>
 
+            {/* Submit Button */}
             <button
               type="submit"
               disabled={state.submitting}
