@@ -10,6 +10,9 @@ export default {
         arima: ['Arima', 'cursive'],
         beauriveau: ['Beau Riveau']
       },
+    colors: {
+      burntOrange: '#713519'
+    }
     },
   },
   plugins: [],
