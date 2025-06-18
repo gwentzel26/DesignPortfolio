@@ -164,7 +164,7 @@ const products = [
   },
   {
     id: 15,
-    name: "City Night: Ceville",
+    name: "City Night: Seville",
     category: "Photography",
     image: Photography5,
     backText:
@@ -263,7 +263,7 @@ function ProductCard({ product }) {
           ${isFlipped ? "[transform:rotateY(180deg)]" : ""}
         `}
       >
-        {/* FRONT FACE */}
+        {/* FRONT */}
         <div className="[backface-visibility:hidden] flex flex-col items-center p-4">
           <img
             src={product.image}
@@ -273,16 +273,20 @@ function ProductCard({ product }) {
           <h3 className="text-gray-700 font-semibold text-sm">{product.name}</h3>
         </div>
 
-        {/* BACK FACE */}
-        {product.backImage ? (
-          <div
-            className="absolute inset-0 flex items-center justify-center bg-cover bg-center rounded-lg shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)]"
-            style={{ backgroundImage: `url(${product.backImage})` }}
-          >
-            <div className="bg-white bg-opacity-80 p-4 rounded-md max-w-xs text-center">
-              <h3 className="text-gray-800 font-semibold mb-2">{product.name}</h3>
-              <p className="text-sm text-gray-700 mb-4">{product.backText}</p>
-              <div className="flex items-center justify-center space-x-4">
+        {/* BACK */}
+        <div
+          className={`
+            absolute inset-0 flex flex-col items-center justify-center p-6 rounded-lg shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)]
+            ${product.backImage ? "bg-cover bg-center text-white" : "bg-white text-gray-800"}
+          `}
+          style={product.backImage ? { backgroundImage: `url(${product.backImage})` } : {}}
+        >
+          <div className={`bg-opacity-80 ${product.backImage ? "bg-white text-gray-800" : ""} p-4 rounded-md max-w-xs text-center`}>
+            <h3 className="font-semibold mb-2">{product.name}</h3>
+            <p className="text-sm mb-4">{product.backText}</p>
+            {/* Always show icons if it's an Album Cover with links */}
+            {product.category === "Album Covers" && (product.spotifyLink || product.appleMusicLink) && (
+              <div className="flex items-center justify-center space-x-4 mb-2">
                 {product.spotifyLink && (
                   <a href={product.spotifyLink} target="_blank" rel="noopener noreferrer">
                     <FaSpotify size={30} />
@@ -294,15 +298,10 @@ function ProductCard({ product }) {
                   </a>
                 )}
               </div>
-            </div>
+            )}
+            <p className="mt-2 text-xs text-gray-500">(Click to flip back)</p>
           </div>
-        ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-lg [backface-visibility:hidden] [transform:rotateY(180deg)]">
-            <h3 className="text-gray-800 font-semibold mb-2">{product.name}</h3>
-            <p className="text-sm text-gray-600 mb-4">{product.backText}</p>
-            <p className="mt-auto text-xs text-gray-500">(Click to flip back)</p>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );
@@ -325,9 +324,7 @@ function Products() {
 
   return (
     <section id="products" className="font-arima overflow-hidden min-h-[780px] sm:min-h-[600px]">
-      {/* Pass category into Navbar */}
       <Navbar category={category} setCategory={setCategory} />
-
       <div className="container mx-auto px-4">
         <ProductGrid category={category} />
       </div>
@@ -336,3 +333,4 @@ function Products() {
 }
 
 export default Products;
+

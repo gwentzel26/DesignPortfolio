@@ -12,7 +12,7 @@ export default function Service() {
                 <ul className='text-gray-700'>
                     <li>In addition to his musical abilities, Gavin creates designs</li>
                     <li>for album covers, press releases, and gig flyers.  </li>
-                    <li>From his love of drawing and photography he creates layers of blended mediums in Adobe Photoshop.</li> 
+                    <li>From his love of drawing and photography he creates layers of blended mediums in Adobe Photoshop. Click on any piece of work to view its description</li> 
                     <li> </li> 
                 </ul>
                 <div className='flex items-center'>
