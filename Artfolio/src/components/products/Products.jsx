@@ -32,10 +32,10 @@ const products = [
     category: "Album Covers",
     image: electricButterfield,
     backText:
-      "Electric Butterfield to be released on July 4, 2025. The music is a fusion of soul, hip-hop, psycadelic, and electronic. Artwork is designed by blending drawings, photography, and digital painting.",
+      "Electric Butterfield was released on July 4, 2025. The music is a fusion of soul, hip-hop, psycadelic, and electronic. Artwork is designed by blending drawings, photography, and digital painting.",
     backImage: bgEB,
-    spotifyLink: "https://distrokid.com/hyperfollow/gavinwentzel/electric-butterfield-2",
-    appleMusicLink: "https://distrokid.com/hyperfollow/gavinwentzel/electric-butterfield-2",
+    spotifyLink: "https://open.spotify.com/album/2UjHxUjMsQm9aXhw5Nn98d?si=kCA60iicTrKHabQGqPNFQA",
+    appleMusicLink: "https://music.apple.com/us/album/electric-butterfield/1816391053",
   },
   {
     id: 2,
