@@ -73,8 +73,8 @@ export default function About() {
             <img
               src={images[currentIndex]}
               alt={`Image ${currentIndex + 1}`}
+              loading="eager"
               className="rounded-lg shadow-md w-full h-full object-cover transition duration-500 ease-in-out"
-              key={currentIndex}
             />
 
             <button
@@ -92,7 +92,12 @@ export default function About() {
           </div>
 
           <div className="flex-1 space-y-4 mt-4 md:mt-0">
-            <img src={desert} alt="Morocco 2017" className="rounded-lg shadow-md w-full h-60 md:h-72 object-cover" />
+            <img
+              src={desert}
+              alt="Morocco 2017"
+              loading="eager"
+              className="rounded-lg shadow-md w-full h-60 md:h-72 object-cover"
+            />
             <div className="text-center">
               <p className="font-semibold font-arima">Morocco 2017</p>
             </div>
