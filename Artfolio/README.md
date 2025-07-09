@@ -1,8 +1,31 @@
-# React + Vite
+# **Music and Digital Art Portfolio**
+  
+## **Description (Motivation? The why?)**
+      This project aimed to display my music, art, promotion design materials, with a biography and about me pictures.
+      It features clean mobilization, flashy yet subtle animations, flippable cards, many call-to-action links, and a clean contact form.
+      
+## **Tools <a id="cleaning"></a>**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    React.js
+    Vite
+    TailwindCSS
+    Node
+    Netlify
+    ReactIcons
+    GoogleFonts
+      
+## **Visuals <a id="visuals"></a>** 
+  ![About Section](./public/AboutSection.png)
+  ![Work Section](./public/WorkSection.png)
+  
+## **Questions <a id="questions"></a>**
+      Please feel free to reach me at gavinbwentzel@gmail.com or on my socials
+      linkedIn - https://www.linkedin.com/in/gavinwentzel/
+      IG: @gavinwentzel
+      tiktok - @gavinwentzel
+      youtube - @gavinwentzel
 
-Currently, two official plugins are available:
+## **Links <a id="links"></a>**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+gavinwentzel.com
+
