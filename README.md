@@ -15,8 +15,8 @@
     GoogleFonts
       
 ## **Visuals <a id="visuals"></a>** 
-  ![About Section](./public/AboutSection.png)
-  ![Work Section](./public/WorkSection.png)
+  ![About Section](./Artfolio/public/AboutSection.png)
+  ![Work Section](./Artfolio/public/WorkSection.png)
   
 ## **Questions <a id="questions"></a>**
       Please feel free to reach me at gavinbwentzel@gmail.com or on my socials
